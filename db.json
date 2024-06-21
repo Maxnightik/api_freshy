@@ -1,50 +1,50 @@
 [
   {
     "id": 1,
-    "title": "Сливочная клубника",
-    "price": 250,
+    "title": "Вершкова полуниця",
+    "price": 50,
     "image": "img/clubnik.jpg",
     "size": "300мл"
   },
   {
     "id": 2,
-    "title": "Лесные ягоды",
-    "price": 290,
+    "title": "Лісові ягоди",
+    "price": 70,
     "image": "img/yagod.jpg",
     "size": "300мл"
   },
   {
     "id": 3,
-    "title": "Лайм и мята",
-    "price": 280,
+    "title": "Лайм і м'ята"",
+    "price": 60,
     "image": "img/lam.jpg",
     "size": "300мл"
   },
   {
     "id": 4,
-    "title": "Карамельный банан",
-    "price": 270,
+    "title": "Карамельний банан",
+    "price": 70,
     "image": "img/banan.jpg",
     "size": "320мл"
   },
   {
     "id": 5,
-    "title": "Киви и яблоко",
-    "price": 250,
+    "title": "Соковитий манго",
+    "price": 50,
     "image": "img/kivi.jpg",
     "size": "300мл"
   },
   {
     "id": 6,
     "title": "Сочный манго",
-    "price": 360,
+    "price": 60,
     "image": "img/mango.jpg",
     "size": "280мл"
   },
   {
     "id": 7,
     "title": "Маракуйя",
-    "price": 380,
+    "price": 50,
     "image": "img/maraka.jpg",
     "size": "280мл"
   }
