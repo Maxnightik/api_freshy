@@ -17,7 +17,7 @@ app.use((req, res, next) => {
   next();
 });
 
-// GET /api/goods - возвращает данные из файла db.json
+// GET /api/goods - повертає дані з файлу db.json
 app.get('/api/goods', async (req, res) => {
   try {
     const data = await readFile(DB_FILE, 'utf8');
@@ -43,11 +43,11 @@ app.get('/img/:filename', async (req, res) => {
   }
 });
 
-// POST /api/order - оформляет заказ с полями имя, телефон и массив с товарами
+// POST /api/order - оформляє замовлення з полями ім'я, телефон та масив з товарами
 app.post('/api/order', async (req, res) => {
   const { name, phone, products } = req.body;
 
-  // Проверка наличия обязательных полей
+  // Перевірка наявності обов'язкових полів
   if (!name || !phone || !products) {
     res.status(400).json({ error: 'Missing required fields' });
     return;
@@ -56,14 +56,14 @@ app.post('/api/order', async (req, res) => {
   const order = { name, phone, products };
 
   try {
-    // Чтение существующих заказов из файла
+    // Читання існуючих замовлень із файлу
     const data = await readFile(ORDERS_FILE, 'utf8');
     const orders = JSON.parse(data);
 
-    // Добавление нового заказа
+    // Додавання нового замовлення
     orders.push(order);
 
-    // Запись обновленных заказов в файл
+    // Запис оновлених замовлень у файл
     await writeFile(ORDERS_FILE, JSON.stringify(orders));
 
     res.json({ message: 'Order placed successfully' });
@@ -73,7 +73,7 @@ app.post('/api/order', async (req, res) => {
   }
 });
 
-// Проверка наличия файла db.json, и создание с пустым массивом, если файла нет
+// Перевірка наявності файлу db.json, та створення з порожнім масивом, якщо файлу немає
 access(DB_FILE)
   .catch(() => writeFile(DB_FILE, '[]'))
   .catch(err => {
@@ -86,7 +86,7 @@ access(ORDERS_FILE)
     console.error(err);
   });
 
-// Запуск сервера
+// Запуск серверу
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
